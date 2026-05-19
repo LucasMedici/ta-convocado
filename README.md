@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Vercel AI SDK
+https://llm-stats.com/ - melhores llm
+https://www.skills.sh/ - melhores skills para se instalar no seu agent
 
-## Getting Started
+StreamingText - Enviar resposta como se estivesse sendo digitada
 
-First, run the development server:
+WebSearch - uma tool que permite que a IA decida se vai fazer uma busca na web (as vezes o corte da inteligência da IA é de um ano antigo, com isso, precisamos de informações atualizadas, ai utilizamos a tool de webSearch)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Segurança 
+ * Rate Limit 
+	Pela requisicao vemos o IP/localizacao do usuario e bloqueamos mais de 100 reqs por exemplo.
+ * Bloquear rota da API que lida com os prompts, validar se tem sessão ativa do usuario, biblioteca OAuth.js no next js ajuda.
+ * Criptografar mensagens, por exemplo, encriptar a mensagem antes de salvar no banco.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Projetinho com o chat, buscador de convocados next + vercel ai sdk
+No readme documentar isso aqui, Temas interessantes para lembrar quando se trata de IA
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Task:
+-implementar web search
+-implementar o que o agent é, deixar os prompts mais clean
+-implementar tamanho de mensagem recebida máxima
+-implementar rate limit
+-melhorar estilização
+-documentar
+-subir
+-finalizar rocketseat
