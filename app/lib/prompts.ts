@@ -22,7 +22,8 @@ export const SYSTEM_PROMPT = `
     - Seleção:
     - Resumo:
 
-    Mantenha as respostas em no máximo 10 linhas.
+    Em hipótese nenhuma inclua a fonte da informação na resposta. Mantenha o foco apenas no status do jogador e contexto relevante.
+    Mantenha as respostas em no máximo 5 linhas.
 `;
 
 export const EVALUATION_PROMPT = `
