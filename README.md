@@ -1,33 +1,67 @@
-ChatBot
-Vercel AI SDK
-https://llm-stats.com/ - melhores llm
-https://www.skills.sh/ - melhores skills para se instalar no seu agent
+# ⚽ Copa 2026 ChatBot
 
-StreamingText - Enviar resposta como se estivesse sendo digitada
+> Assistente inteligente que responde em tempo real se um jogador de futebol foi convocado para a **Copa do Mundo de 2026**, com suporte a busca na web e streaming de respostas.
 
-WebSearch - uma tool que permite que a IA decida se vai fazer uma busca na web (as vezes o corte da inteligência da IA é de um ano antigo, com isso, precisamos de informações atualizadas, ai utilizamos a tool de webSearch)
+---
 
+## 🛠️ Tecnologias
 
+- [Next.js](https://nextjs.org/) — framework React full-stack
+- [Vercel AI SDK](https://sdk.vercel.ai/) — orquestração de LLMs e streaming
+- [Web Search Tool](https://www.skills.sh/) — busca em tempo real para dados atualizados
 
+---
 
-Segurança 
- * Rate Limit 
-	Pela requisicao vemos o IP/localizacao do usuario e bloqueamos mais de 100 reqs por exemplo.
- * Bloquear rota da API que lida com os prompts, validar se tem sessão ativa do usuario, biblioteca OAuth.js no next js ajuda.
- * Criptografar mensagens, por exemplo, encriptar a mensagem antes de salvar no banco.
+## ✨ Funcionalidades
 
+| Recurso | Descrição |
+|---|---|
+| **Streaming de texto** | Respostas exibidas progressivamente, como se estivessem sendo digitadas |
+| **Busca na web** | A IA decide automaticamente quando consultar dados atualizados sobre convocações |
+| **RateLimits** | O sistema bloqueia diversas tentativas de requisição vindas do mesmo IP |
 
+---
 
+## 📸 Screenshots
 
-Projetinho com o chat, buscador de convocados next + vercel ai sdk
-No readme documentar isso aqui, Temas interessantes para lembrar quando se trata de IA
+**Tela inicial:**
 
-Task:
--implementar web search X
--implementar o que o agent é, deixar os prompts mais clean X
--implementar tamanho de mensagem recebida máxima X
--implementar rate limit
--melhorar estilização X
--documentar
--subir
--finalizar rocketseat
+![Chat normal](public/ta-convocado.png)
+
+**Após pergunta e resposta:**
+
+![Chat com resposta](public/ta-convocado2.png)
+
+---
+
+## 🚀 Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env.local
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+Acesse `http://localhost:3000` no seu navegador.
+
+---
+
+## 🔐 Segurança *(planejado)*
+
+- **Proteção de rotas da API** — validação de sessão ativa via [Auth.js](https://authjs.dev/) (ex-NextAuth)
+- **Criptografia de mensagens** — encriptação antes de persistir no banco de dados
+
+---
+
+## 🔗 Referências
+
+- [llm-stats.com](https://llm-stats.com/) — comparativo de performance entre LLMs
+- [skills.sh](https://www.skills.sh/) — catálogo de skills para agentes de IA
