@@ -1,4 +1,4 @@
-# ⚽ Copa 2026 ChatBot
+# ⚽ ChatBot - Ta convocado?
 
 > Assistente inteligente que responde em tempo real se um jogador de futebol foi convocado para a **Copa do Mundo de 2026**, com suporte a busca na web e streaming de respostas.
 
