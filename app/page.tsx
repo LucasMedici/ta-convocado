@@ -3,6 +3,8 @@
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport } from 'ai';
 import { useState } from 'react';
+import remarkGfm from 'remark-gfm';
+import Markdown from 'react-markdown';
 
 export default function Home() {
   const [input, setInput] = useState('');
@@ -59,7 +61,29 @@ export default function Home() {
                   <div className="space-y-3 text-sm leading-relaxed">
                     {m.parts.map((part, i) => {
                       if (part.type === 'text') {
-                        return <p key={i}>{part.text}</p>;
+                        return (
+                          <Markdown
+                            key={i}
+                            remarkPlugins={[remarkGfm]}
+                            components={{
+                              p: (props) => (
+                                <p className="text-sm leading-relaxed" {...props} />
+                              ),
+                              ul: (props) => (
+                                <ul className="ml-5 list-disc space-y-2" {...props} />
+                              ),
+                              ol: (props) => (
+                                <ol className="ml-5 list-decimal space-y-2" {...props} />
+                              ),
+                              li: (props) => <li className="pl-1" {...props} />,
+                              strong: (props) => (
+                                <strong className="text-zinc-100" {...props} />
+                              ),
+                            }}
+                          >
+                            {part.text}
+                          </Markdown>
+                        );
                       }
                       return null;
                     })}
