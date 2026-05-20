@@ -23,11 +23,11 @@ Projetinho com o chat, buscador de convocados next + vercel ai sdk
 No readme documentar isso aqui, Temas interessantes para lembrar quando se trata de IA
 
 Task:
--implementar web search
--implementar o que o agent é, deixar os prompts mais clean
--implementar tamanho de mensagem recebida máxima
+-implementar web search X
+-implementar o que o agent é, deixar os prompts mais clean X
+-implementar tamanho de mensagem recebida máxima X
 -implementar rate limit
--melhorar estilização
+-melhorar estilização X
 -documentar
 -subir
 -finalizar rocketseat
